@@ -1,14 +1,15 @@
 import { Card, CardBody, CardFooter, Button } from 'reactstrap'
+import SeccionCita from './Cita/SeccionCita'
 
 const Cita = ({ cita, handleOnDelete }) => {
     return (
         <Card>
             <CardBody>
-                <p className='text-black'><b>Mascota: </b>{cita.nombreMascota}</p>
-                <p className='text-black'><b>Dueño: </b>{cita.nombreDueño}</p>
-                <p className='text-black'><b>Fecha: </b>{cita.fechaConsulta}</p>
-                <p className='text-black'><b>Hora: </b>{cita.hora}</p>
-                <p className='text-black'><b>Sintomas: </b>{cita.sintomas}</p>
+                <SeccionCita title="Mascota" value={cita.nombreMascota} />
+                <SeccionCita title="Dueño" value={cita.nombreDueño} />
+                <SeccionCita title="Fecha" value={cita.fechaConsulta} />
+                <SeccionCita title="Hora" value={cita.hora} />
+                <SeccionCita title="Sintomas" value={cita.sintomas} />
             </CardBody>
             <CardFooter>
                 <Button onClick={() => handleOnDelete(cita.id)} color='danger w-100'>Eliminar</Button>

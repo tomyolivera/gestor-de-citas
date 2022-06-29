@@ -33,7 +33,6 @@ const Formulario = ({ handleOnSubmit }) => {
                 <Form>
                     <h3 className='text-center mb-5'>CREAR CITA</h3>
 
-                    {/* Errors */}
                     <FormGroup error={errors.nombreMascota} name="nombreMascota" label="Nombre de la Mascota" />
                     <FormGroup error={errors.nombreDueño} name="nombreDueño" label="Nombre del Dueño" />
                     <FormGroup error={errors.fechaConsulta} type="date" name="fechaConsulta" label="Fecha" />
