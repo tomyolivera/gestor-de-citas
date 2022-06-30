@@ -1,4 +1,3 @@
-// funcion para fecha actual en input date
 export function getFechaActual() {
     var fecha = new Date();
     var dia = fecha.getDate();
