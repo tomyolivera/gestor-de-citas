@@ -1,4 +1,4 @@
-import { Formik, Form, Field } from 'formik'
+import { Formik, Form } from 'formik'
 import { Button } from 'reactstrap'
 import CitaSchema from '../Cita/Schema'
 
