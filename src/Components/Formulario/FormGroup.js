@@ -6,7 +6,7 @@ const FormGroup = ({ type="text", label, name, error=null }) => {
   return (
     <ReactFormGroup className="mb-3">
         <Label for={name}>{label}</Label>
-        <Field type={type} name={name} className="form-control" autocomplete="off" />
+        <Field type={type} name={name} className="form-control" autoComplete="off" />
         { error && <div className="text-warning">{error}</div> }
     </ReactFormGroup>
   )

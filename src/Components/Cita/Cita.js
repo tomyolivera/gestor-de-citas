@@ -1,5 +1,5 @@
 import { Card, CardBody, CardFooter, Button } from 'reactstrap'
-import SeccionCita from './Cita/SeccionCita'
+import SeccionCita from './SeccionCita'
 
 const Cita = ({ cita, handleOnDelete }) => {
     return (
