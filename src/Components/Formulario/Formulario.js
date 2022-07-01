@@ -9,8 +9,9 @@ const Formulario = ({ handleOnSubmit }) => {
         <Formik
             initialValues={{nombreMascota: '', nombreDueño: '', fechaConsulta: '', hora: '', sintomas: ''}}
             validationSchema={CitaSchema}
-            onSubmit={({nombreMascota, nombreDueño, fechaConsulta, hora, sintomas}) => {
+            onSubmit={({nombreMascota, nombreDueño, fechaConsulta, hora, sintomas}, {resetForm}) => {
                 handleOnSubmit({nombreMascota, nombreDueño, fechaConsulta, hora, sintomas})
+                resetForm()
             }}
         >
             {({ errors, isValid }) => (

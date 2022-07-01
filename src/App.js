@@ -9,19 +9,20 @@ const App = () => {
 
     useEffect(() => {
         const citasLocalStorage = localStorage.getItem('citas')
-        if (citasLocalStorage)
-            setCitas(JSON.parse(citasLocalStorage))
+        if (citasLocalStorage) setCitas(JSON.parse(citasLocalStorage))
     }, [])
 
     const handleOnSubmit = cita => {
         const id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15) // random id
-        setCitas([...citas, {...cita, id}])
-        localStorage.setItem('citas', JSON.stringify([...citas, {...cita, id}]))
+        const newCita = [...citas, {...cita, id}]
+        setCitas(newCita)
+        localStorage.setItem('citas', JSON.stringify(newCita))
     }
 
     const handleOnDelete = id => {
-        setCitas(citas.filter(cita => cita.id !== id))
-        localStorage.setItem('citas', JSON.stringify(citas.filter(cita => cita.id !== id)))
+        const newCitasArray = citas.filter(cita => cita.id !== id)
+        setCitas(newCitasArray)
+        localStorage.setItem('citas', JSON.stringify(newCitasArray))
     }
 
     return (
